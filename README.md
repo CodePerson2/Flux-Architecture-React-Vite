@@ -1,7 +1,7 @@
-#Flux Architecture with React + Vite
+# Flux Architecture with React + Vite
 This repo demonstrates a minimal Flux architecture integrated with a Vite + React app.
 
-##📦 Structure
+## 📦 Structure
 
 ├── App.jsx              // Main React component
 ├── flux/
@@ -10,11 +10,12 @@ This repo demonstrates a minimal Flux architecture integrated with a Vite + Reac
 │   ├── Actions.js       // Action handlers
 │   └── ActionNames.js   // Action name constants
 
-##⚙️ Setup
+## ⚙️ Setup
 ```bash
 npm install
 npm run dev
-🧠 Core Concept
+```
+## 🧠 Core Concept
 This setup implements unidirectional data flow using Flux:
 
 App triggers actions.
@@ -25,14 +26,14 @@ Store listens and mutates internal state.
 
 Components listen for store updates and re-render.
 
-###🧱 Example Store
+## 🧱 Example Store
 
 // Store.js
 handleActions(action) {
     actions(this, action); // Delegate logic to actions
 }
 
-###🔁 Listening to Changes
+## 🔁 Listening to Changes
 Components can subscribe to the store:
 
 
@@ -42,14 +43,14 @@ useEffect(() => {
     return () => store.removeChangeListener(onChange);
 }, []);
 
-##🚀 Why This?
+## 🚀 Why This?
 Clean Flux pattern with minimal boilerplate
 
 Easy to extend
 
 Fast setup via Vite
 
-##🧼 Reset State
+## 🧼 Reset State
 js
 Copy
 Edit
